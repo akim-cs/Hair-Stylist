@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Artist Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Star Rating Specific Styles - Added inline to ensure they're applied */
+        .star-rating i {
+          font-size: 30px;
+          color: #444;
+          margin-right: 5px;
+          cursor: pointer;
+          transition: color 0.2s ease;
+        }
+        
+        .star-rating i:hover,
+        .star-rating i.active {
+          color: #d4af37;
+        }
+        
+        .star-rating i.fas {
+          color: #d4af37;
+        }
+        
+        .star-rating i.far {
+          color: #444;
+        }
+        
+        .average-rating {
+          font-size: 18px;
+          margin-bottom: 20px;
+          color: #d4af37;
+          font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#hero" class="logo">ANDY KIM</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Look</h1>
+                <p>Expert hair styling that brings your vision to life</p>
+                <a href="#booking" class="btn">Book an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/api/placeholder/600/600" alt="Hair Stylist Portrait">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>Welcome to my world of hair artistry. I'm an aspiring software developer hustling as a barber on the side with 5+ years of experience cutting hair.</p>
+                    <br/>
+                    <p>I specialize in modern trendy cuts and styles so whether you're looking for a burst, shadow, taper-fade, a modern mullet, or even just a maintenance trim you'll be in great hands.</p>
+                    <br/>
+                    <p>I believe that great hair should be an extension of your personality, so between our pre-cut consultation and the actual haircut itself you can expect me to be in your service for about an hour.</p>
+                    <br/>
+                    <p>Feel free to come in with reference videos, pictures, TikToks, IG reels. I'm here for all of it. I want to help make your vision come to life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <p>Browse through some of my best hairstyles and transformations</p>
+            
+            <div class="portfolio-gallery">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 1">
+                    <div class="overlay">
+                        <h3>Modern Bob</h3>
+                        <p>Precision cut with textured ends</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 2">
+                    <div class="overlay">
+                        <h3>Layered Long Cut</h3>
+                        <p>Added movement and volume</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 3">
+                    <div class="overlay">
+                        <h3>Pixie Cut</h3>
+                        <p>Bold and edgy transformation</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 4">
+                    <div class="overlay">
+                        <h3>Color Melt</h3>
+                        <p>Seamless color transition</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 5">
+                    <div class="overlay">
+                        <h3>Men's Fade</h3>
+                        <p>Clean lines and perfect blend</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/400" alt="Haircut Style 6">
+                    <div class="overlay">
+                        <h3>Balayage</h3>
+                        <p>Hand-painted highlights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <h2 class="section-title">Book an Appointment</h2>
+            <p>Reserve your spot for a personalized hair experience</p>
+            
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3>Service Menu</h3>
+                    <ul class="service-list">
+                        <li>Men's Cut - $35</li>
+                    </ul>
+                    
+                    <div class="booking-form">
+                        <h3>Your Information</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <select id="service" required>
+                                <option value="">Select a service</option>
+                                <option value="men-cut">Men's Cut</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Special Notes</label>
+                            <textarea id="notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Confirm Booking</button>
+                    </div>
+                </div>
+                
+                <div class="booking-calendar">
+                    <div class="calendar-header">
+                        <div class="calendar-current-month">May 2025</div>
+                        <div class="calendar-nav">
+                            <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                            <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-day-names">
+                        <div class="day-name">Sun</div>
+                        <div class="day-name">Mon</div>
+                        <div class="day-name">Tue</div>
+                        <div class="day-name">Wed</div>
+                        <div class="day-name">Thu</div>
+                        <div class="day-name">Fri</div>
+                        <div class="day-name">Sat</div>
+                    </div>
+                    
+                    <div class="calendar-grid">
+                        <!-- These would be dynamically generated with JavaScript -->
+                        <div class="calendar-day other-month">27</div>
+                        <div class="calendar-day other-month">28</div>
+                        <div class="calendar-day other-month">29</div>
+                        <div class="calendar-day other-month">30</div>
+                        <div class="calendar-day current-month">1</div>
+                        <div class="calendar-day current-month">2</div>
+                        <div class="calendar-day current-month">3</div>
+                        
+                        <div class="calendar-day current-month">4</div>
+                        <div class="calendar-day current-month">5</div>
+                        <div class="calendar-day current-month">6</div>
+                        <div class="calendar-day current-month">7</div>
+                        <div class="calendar-day current-month">8</div>
+                        <div class="calendar-day current-month">9</div>
+                        <div class="calendar-day current-month">10</div>
+                        
+                        <div class="calendar-day current-month">11</div>
+                        <div class="calendar-day current-month">12</div>
+                        <div class="calendar-day current-month">13</div>
+                        <div class="calendar-day current-month">14</div>
+                        <div class="calendar-day current-month">15</div>
+                        <div class="calendar-day current-month">16</div>
+                        <div class="calendar-day current-month">17</div>
+                        
+                        <div class="calendar-day current-month">18</div>
+                        <div class="calendar-day current-month selected">19</div>
+                        <div class="calendar-day current-month available">20</div>
+                        <div class="calendar-day current-month available">21</div>
+                        <div class="calendar-day current-month available">22</div>
+                        <div class="calendar-day current-month available">23</div>
+                        <div class="calendar-day current-month">24</div>
+                        
+                        <div class="calendar-day current-month">25</div>
+                        <div class="calendar-day current-month available">26</div>
+                        <div class="calendar-day current-month available">27</div>
+                        <div class="calendar-day current-month available">28</div>
+                        <div class="calendar-day current-month available">29</div>
+                        <div class="calendar-day current-month available">30</div>
+                        <div class="calendar-day current-month">31</div>
+                    </div>
+                    
+                    <div class="time-slots">
+                        <h3>Available Time Slots for May 19</h3>
+                        <div class="time-slot-container">
+                            <div class="time-slot booked">9:00 AM</div>
+                            <div class="time-slot booked">10:00 AM</div>
+                            <div class="time-slot">11:00 AM</div>
+                            <div class="time-slot selected">12:00 PM</div>
+                            <div class="time-slot">1:00 PM</div>
+                            <div class="time-slot">2:00 PM</div>
+                            <div class="time-slot booked">3:00 PM</div>
+                            <div class="time-slot">4:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">Client Reviews</h2>            
+            <div class="reviews-container">
+                <!-- Reviews will be loaded dynamically -->
+            </div>
+            
+            <div class="add-review">
+                <h3>Leave a Review</h3>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name</label>
+                        <input type="text" id="reviewer-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Rating</label>
+                        <div class="star-rating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-text">Your Review</label>
+                        <textarea id="review-text" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Hair Artist. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation scroll behavior
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Calendar functionality
+            const calendarDays = document.querySelectorAll('.calendar-day');
+            const monthDisplay = document.querySelector('.calendar-current-month');
+            const prevMonthBtn = document.getElementById('prev-month');
+            const nextMonthBtn = document.getElementById('next-month');
+            
+            // Current displayed month and year (would be dynamic in a real application)
+            let currentMonth = 4; // May (0-indexed)
+            let currentYear = 2025;
+            
+            // Month names for display
+            const monthNames = [
+                'January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
+            ];
+            
+            // Update the calendar when month navigation buttons are clicked
+            if (prevMonthBtn) {
+                prevMonthBtn.addEventListener('click', function() {
+                    currentMonth--;
+                    if (currentMonth < 0) {
+                        currentMonth = 11;
+                        currentYear--;
+                    }
+                    updateCalendarHeader();
+                    // In a real app, this would also update the calendar days
+                });
+            }
+            
+            if (nextMonthBtn) {
+                nextMonthBtn.addEventListener('click', function() {
+                    currentMonth++;
+                    if (currentMonth > 11) {
+                        currentMonth = 0;
+                        currentYear++;
+                    }
+                    updateCalendarHeader();
+                    // In a real app, this would also update the calendar days
+                });
+            }
+            
+            function updateCalendarHeader() {
+                if (monthDisplay) {
+                    monthDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+                }
+            }
+            
+            // Day selection in calendar
+            calendarDays.forEach(day => {
+                if (!day.classList.contains('other-month') && !day.classList.contains('booked')) {
+                    day.addEventListener('click', function() {
+                        // Remove selected class from previously selected day
+                        document.querySelectorAll('.calendar-day.selected').forEach(selected => {
+                            selected.classList.remove('selected');
+                        });
+                        
+                        // Add selected class to clicked day
+                        this.classList.add('selected');
+                        
+                        // Update time slots heading (would fetch available times from server in real app)
+                        const timeSlotsHeading = document.querySelector('.time-slots h3');
+                        if (timeSlotsHeading) {
+                            timeSlotsHeading.textContent = `Available Time Slots for ${monthNames[currentMonth]} ${this.textContent}`;
+                        }
+                    });
+                }
+            });
+            
+            // Time slot selection
+            const timeSlots = document.querySelectorAll('.time-slot:not(.booked)');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function() {
+                    // Remove selected class from previously selected time slot
+                    document.querySelectorAll('.time-slot.selected').forEach(selected => {
+                        selected.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked time slot
+                    this.classList.add('selected');
+                });
+            });
+        });
+    </script>
+    <script src="reviews.js"></script>
+</body>
+</html>
